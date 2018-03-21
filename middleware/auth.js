@@ -5,7 +5,7 @@ export default function ({ store, error, redirect}) {
       statusCode: 403
     })
     setTimeout(() => {
-      redirect('/')
+      redirect('/')//中间件中如果没有权限 则让他跳转登录页
     }, 0);
   }
   

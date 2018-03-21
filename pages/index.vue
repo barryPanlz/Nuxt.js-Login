@@ -25,7 +25,7 @@ export default {
       formError: null,
       formUsername: '',
       formPassword: '',
-      fromFullpath:""
+      fromFullpath:"/"
     }
   },
   methods: {
@@ -36,9 +36,7 @@ export default {
           password: this.formPassword
         })
         if(this.$store.state.authUser){
-          console.log(this.fromFullpath)
-          this.$router.push(this.fromFullpath);
-          // this.$router.push({ path: this.fromFullpath });
+          this.$router.push(this.fromFullpath);//跳转存储的from地址 如果没有 则跳转默认值
         }
         this.formUsername = ''
         this.formPassword = ''
@@ -61,7 +59,7 @@ export default {
   next(vm => {
     console.log("vm是",vm)
     vm.fromFullpath=from.fullPath
-    // 通过 `vm` 访问组件实例
+    // 通过 `vm` 访问组件实例,赋值给fullPath,
   })
 }
 }

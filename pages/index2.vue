@@ -8,7 +8,7 @@
 
 <script>
     export default {
-        middleware: 'auth'
+        middleware: 'auth'//需要拦截都需要增加中间件
     }
 </script>
 
